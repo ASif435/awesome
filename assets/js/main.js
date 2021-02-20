@@ -1,6 +1,16 @@
 
     // magnific popup
     $(document).ready(function() {
+        //sticky menu
+      $(window).on('scroll',function() {    
+        var scroll = $(window).scrollTop();
+        if (scroll < 245) {
+         $(".sticky-menu").removeClass("scroll-header");
+        }else{
+         $(".sticky-menu").addClass("scroll-header");
+        }
+       });
+        //pop-up
         $('.popup').magnificPopup({type:'iframe'});
         //slick slider
         $('.review-active').slick({
