@@ -19,6 +19,32 @@ img{
 	top: 0;
 	left: 0;
 }
+
+/* added sticky menu code */
+.heade-section.sticky-menu.scroll-header {
+	position: fixed;
+	background: #fff;
+	left: 0;
+	right: 0;
+	width: 100%;
+	box-shadow: 0 6px 13px 0 rgba(0,0,0,.06);
+    z-index: 9999;
+    transition:stick .95s ease-out ;
+}
+@keyframes stick{
+    0%{
+        transform: translate(0);
+        opacity: 0;
+    }
+    50%{
+        transform: translate(60%);
+        opacity: .5;
+    }
+    100%{
+        transform: translate(100%);
+        opacity: 1;
+    }
+	
 .header-logo{}
 .header-logo a{
     text-decoration: none;
